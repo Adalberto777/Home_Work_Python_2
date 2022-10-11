@@ -2,7 +2,7 @@
 # Пример:
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-def List_Number(n):
+def list_number(n):
     list_num = []
     m = 1
     for i in range(n):
@@ -12,4 +12,4 @@ def List_Number(n):
 
 
 n = int(input("Enter N: "))
-print(List_Number(n))
+print(list_number(n))
