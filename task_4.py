@@ -30,9 +30,9 @@ def sum_interval(str, index_1, index_2):
 
 
 def check_index(n, index_1, index_2):
-    result_check = 1
+    result_check = True
     if(index_1 < 0 or index_2 < 0) or (index_1 == index_2) or (index_1 > 2 * n or  index_2 > 2 * n):
-        result_check = 0
+        result_check = False
     return result_check
 
 
@@ -41,7 +41,7 @@ n = int(input("Enter N: "))
 index_1 = int(input("Enter start index: "))
 index_2 = int(input("Enter end index: "))
 
-if check_index(n, index_1, index_2) == 1:    
+if check_index(n, index_1, index_2) == True:    
     str = list_number(n)
     print(str)
     print(sum_interval(str, index_1, index_2))
