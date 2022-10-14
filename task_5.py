@@ -3,15 +3,21 @@ import random
 
 
 def mix_str(str):
-    str_mod = []
-    str_find = 0
+    str_index = [] # создаем строку для перемешивания индексов
+    str_mix = [] # создаем массив для итоговых результатов
+    get_index = 0 # переменная 
     for i in range(len(str)):
-        while str_mod.count(str_find) != 0:
-            str_find = random.randint(0, len(str)-1)
-        str_mod.append(str_find)
-    return str_mod  
+        while str_index.count(get_index) != 0:
+            get_index = random.randint(0, len(str)-1)
+        str_index.append(get_index)
+
+    for i in str_index:
+        str_mix.append(str[i])
+
+    return str_mix 
       
 
-str = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+str = ['p', 'r' , 'i', 'v', 'e', 't', 6, 7, 8, 9]
+
 print(str)
 print(mix_str(str))
