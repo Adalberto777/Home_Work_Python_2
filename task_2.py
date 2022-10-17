@@ -5,9 +5,11 @@
 def list_number(n):
     list_num = []
     m = 1
+
     for i in range(n):
         m *= (i + 1)
         list_num.append(m)
+        
     return list_num
 
 

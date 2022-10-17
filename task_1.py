@@ -7,8 +7,10 @@
 def sum_num(str):
     sum = 0
     str_mod = (str.translate({ord(i): None for i in ',.-+'}))
+    
     for i in range(len(str_mod)):
         sum += int(str_mod[i])
+
     return sum
 
 

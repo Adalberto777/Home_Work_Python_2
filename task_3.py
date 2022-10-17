@@ -6,14 +6,17 @@
 def list_number(n):
     list_num = []
     m = 1
+
     for i in range(n):
         m = round(((1 + 1 / (i + 1)) ** (i+1)), 2)
         list_num.append(m)
+
     return list_num
 
 
 def sum_number(str):
     sum = 0
+    
     for i in range(len(str)):
             sum += str[i]
         

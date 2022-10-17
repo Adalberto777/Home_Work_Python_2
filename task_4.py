@@ -12,27 +12,32 @@ import random
 
 def list_number(n):
     list_num = []
+
     for i in range(-n, n+1):
         list_num.append(random.randint(-n, n))
     return list_num
 
 
-def sum_interval(str, index_1, index_2):
-    sum = 0
+def composition_interval(str, index_1, index_2):
+    composition_num = 1
+
     if index_1 > index_2:
         temp = index_1
         index_1 = index_2
         index_2 = temp
 
     for i in range(index_1, index_2+1):
-        sum += str[i]
-    return sum
+        composition_num *= str[i]
+
+    return composition_num
 
 
 def check_index(n, index_1, index_2):
     result_check = True
+
     if(index_1 < 0 or index_2 < 0) or (index_1 == index_2) or (index_1 > 2 * n or  index_2 > 2 * n):
         result_check = False
+        
     return result_check
 
 
@@ -44,5 +49,5 @@ index_2 = int(input("Enter end index: "))
 if check_index(n, index_1, index_2) == True:    
     str = list_number(n)
     print(str)
-    print(sum_interval(str, index_1, index_2))
+    print(composition_interval(str, index_1, index_2))
 else: print(f'Проверте введенные индексы {index_1} и {index_2}')
